@@ -71,3 +71,15 @@ resource "aws_launch_configuration" "ecs_launch_config" {
       create_before_destroy = true
     }
 }
+
+resource "aws_autoscaling_group" "ecs_asg" {
+  availability_zones = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
+  name = "ecs_autoscaling_group"
+  max_size = 1
+  min_size = 1
+  health_check_grace_period = 300
+  health_check_type = "ELB"
+  desired_capacity = 1
+  force_delete = true
+  launch_configuration = "${aws_launch_configuration.ecs_launch_config.name}"
+}
