@@ -36,11 +36,21 @@ resource "aws_iam_role_policy" "ecs_container_role_policy" {
         "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
         "elasticloadbalancing:Describe*",
         "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+        "ecr:BatchGetImage",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
         "ecs:CreateCluster",
         "ecs:DeregisterContainerInstance",
         "ecs:DiscoverPollEndpoint",
         "ecs:Poll",
-        "ecs:RegisterContainerInstance"
+        "ecs:RegisterContainerInstance",
+        "ecs:StartTelemetrySession",
+        "ecs:SubmitContainerStateChange",
+        "ecs:SubmitTaskStateChange",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "s3:*"
       ],
       "Resource": "*"
     }
