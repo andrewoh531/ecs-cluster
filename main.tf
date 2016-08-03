@@ -48,6 +48,7 @@ resource "aws_iam_role_policy" "ecs_container_role_policy" {
         "ecs:StartTelemetrySession",
         "ecs:SubmitContainerStateChange",
         "ecs:SubmitTaskStateChange",
+        "lambda:InvokeFunction",
         "logs:CreateLogStream",
         "logs:PutLogEvents",
         "s3:*"
