@@ -45,7 +45,7 @@ EOF
 }
 
 resource "aws_security_group" "elb_security_group" {
-  name = "elb_security_group"
+  name = "${var.elb_security_group_name}"
   description = "Allow all inbound traffic"
 
   ingress {
@@ -112,5 +112,3 @@ resource "aws_ecs_service" "ecs_service" {
     container_port = "${var.container_port}"
   }
 }
-
-
