@@ -8,6 +8,8 @@ variable "ecs_iam_role_policy_name" {}
 
 variable "elb_name" {}
 
+variable "elb_security_group_name" {}
+
 variable "container_port" {}
 
 variable "container_name" {}
