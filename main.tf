@@ -91,6 +91,13 @@ resource "aws_security_group" "ecs_ec2_security_group" {
   }
 
   ingress {
+      from_port = 3000
+      to_port = 3000
+      protocol = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
       from_port = 3002
       to_port = 3002
       protocol = "tcp"
