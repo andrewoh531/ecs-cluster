@@ -31,6 +31,7 @@ resource "aws_iam_role_policy" "ecs_container_role_policy" {
     {
       "Effect": "Allow",
       "Action": [
+        "dynamodb:PutItem",
         "ec2:AuthorizeSecurityGroupIngress",
         "ec2:Describe*",
         "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
