@@ -16,10 +16,12 @@ variable "container_name" {}
 
 variable "task_family" {}
 
-variable "container_defintion" {}
+variable "container_definition" {}
 
 variable "ecs_service_name" {}
 
 variable "zone_id" {}
 
 variable "subdomain" {}
+
+variable "log_group" {}

@@ -35,7 +35,9 @@ resource "aws_iam_role_policy" "ecs_iam_role_policy" {
         "ec2:Describe*",
         "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
         "elasticloadbalancing:Describe*",
-        "elasticloadbalancing:RegisterInstancesWithLoadBalancer"
+        "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
       ],
       "Resource": "*"
     }
@@ -92,7 +94,7 @@ resource "aws_elb" "elb" {
 
 resource "aws_ecs_task_definition" "task_definition" {
   family = "${var.task_family}"
-  container_definitions = "${var.container_defintion}"
+  container_definitions = "${var.container_definition}"
 }
 
 
@@ -112,4 +114,8 @@ resource "aws_ecs_service" "ecs_service" {
     container_name = "${var.container_name}"
     container_port = "${var.container_port}"
   }
+}
+
+resource "aws_cloudwatch_log_group" "log_group" {
+  name = "${var.log_group}"
 }
