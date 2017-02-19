@@ -164,7 +164,7 @@ Resources:
             Action: ['ecs:CreateCluster', 'ecs:DeregisterContainerInstance', 'ecs:DiscoverPollEndpoint',
               'ecs:Poll', 'ecs:RegisterContainerInstance', 'ecs:StartTelemetrySession',
               'ecs:Submit*', 'logs:CreateLogStream', 'logs:PutLogEvents', 'ecr:GetAuthorizationToken',
-              'ecr:BatchGetImage', 'ecr:GetDownloadUrlForLayer', 's3:GetObject*', 'lambda:InvokeFunction']
+              'ecr:BatchGetImage', 'ecr:GetDownloadUrlForLayer', 's3:GetObject*', 'lambda:InvokeFunction', 'dynamodb:*']
             Resource: '*'
   AutoscalingRole:
     Type: AWS::IAM::Role
