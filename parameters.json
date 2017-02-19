@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "vpc-68270f0d"
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "andrewoh1983"
+  },
+  {
+    "ParameterKey": "SubnetID",
+    "ParameterValue": "subnet-16fde350,subnet-483d353f,subnet-5979963d"
+  },
+  {
+    "ParameterKey": "DomainName",
+    "ParameterValue": "dev.andrewoh.ninja."
+  },
+  {
+    "ParameterKey": "Route53HostedZoneId",
+    "ParameterValue": "Z3OC3BO9EC9OWG"
+  }
+]

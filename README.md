@@ -1,10 +1,9 @@
 #ECS Cluster
-This repo creates the necessary AWS foundation resources to use ECS (Ec2 Container Service).
+This repo contains YAML based Cloudformation templates for a base ECS infrastructure and then a separate template to build an ECS Service on top of it.
 
-Applications will need to depend on the resources created from this repo in order to deploy ECS Services and Tasks in AWS.
+The base ECS infrastructure will build and share the following common AWS resources across the ECS Services:
+* EC2 instances
+* An Application Load Balancer (ALB)
+    * The ALB can be configured with a separate target group for each containerized service that you deploy
+* ECS Cluster
 
-A `dev.andrewoh.ninja` subdomain is created as part of this Terraform configuration. This is routed from the `andrewoh.ninja`
-hosted zone from the `andrewoh531` account that contains a NS record of the `dev.andrewoh.ninja` NS servers. The `dev.andrewoh.ninja`
-NS servers were manually copied into the NS record.
-
-This repo relies on Terraform.
