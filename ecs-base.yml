@@ -205,21 +205,35 @@ Outputs:
   VpcId:
     Description: VPC used for this stack
     Value: !Ref 'VpcId'
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'VpcId'] ]
   SubnetID:
     Description: Subnets used for this stack
     Value: !Join [ ',', !Ref 'SubnetID' ] 
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'SubnetID'] ]
   ECSCluster:
     Description: ECS Cluster name
     Value: !Ref 'ECSCluster'
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'ECSCluster'] ]
   ECSAlb:
     Description: The application load balancer used for this ECS cluster
     Value: !Ref 'ECSALB'
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'ECSAlb'] ]
   ECSAlbUrl:
     Description: The dns name for the application load balancer
     Value: !Join ['', [!GetAtt [ECSALB, DNSName]]]
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'ECSAlbUrl'] ]
   ALBListener:
     Description: The ALB listener
     Value: !Ref 'ALBListener'
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'ALBListener'] ]
   Route53ARecord:
     Description: The route 53 A Record used for this stack
     Value: !Ref 'Route53ARecord'
+    Export:
+      Name: !Join [ '-', [ !Ref 'AWS::StackName', 'Route53ARecord'] ]
