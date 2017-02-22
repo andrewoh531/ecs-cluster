@@ -13,6 +13,12 @@ Parameters:
   ECSCluster:
     Type: String
     Description: ECS Cluster's ARN to which this will be joining
+    
+  # Commenting this out until !ImportValue function works in conjunction with !Join and !Ref. Currently not supported and thus cannot use the base stack to generate the output string to import from.  
+  # BaseStack:
+  #   Type: String
+  #   Description: The base stack (ecs-base.yml stack instance) with the ECS Cluster, ec2 instances etc. created in
+
   ApplicationName:
     Type: String
     Description: Application name
