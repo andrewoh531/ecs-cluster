@@ -20,7 +20,7 @@ then
 fi
 
 echo "Executing $command-stack"
-aws cloudformation $command-stack --stack-name $stackName --template-url $templateUrl --parameters file://parameters-dev.json --capabilities CAPABILITY_IAM
+aws cloudformation $command-stack --stack-name $stackName --template-url $templateUrl --parameters file://examples/ecs-base-parameters-dev.json --capabilities CAPABILITY_IAM
 
 echo "Executing stack $command..."
 aws cloudformation wait stack-$command-complete --stack-name $stackName

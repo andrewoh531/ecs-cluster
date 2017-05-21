@@ -1,15 +1,15 @@
 [
   {
     "ParameterKey": "VpcId",
-    "ParameterValue": "vpc-68270f0d"
+    "ParameterValue": "vpc-6076ce04"
   },
   {
     "ParameterKey": "KeyName",
-    "ParameterValue": "andrewoh1983"
+    "ParameterValue": "sharonohk"
   },
   {
     "ParameterKey": "SubnetID",
-    "ParameterValue": "subnet-16fde350,subnet-483d353f,subnet-5979963d"
+    "ParameterValue": "subnet-3cc58158,subnet-60921639,subnet-0f503979"
   },
   {
     "ParameterKey": "DomainName",
@@ -17,6 +17,6 @@
   },
   {
     "ParameterKey": "Route53HostedZoneId",
-    "ParameterValue": "Z3OC3BO9EC9OWG"
+    "ParameterValue": "ZYIAZ6AOVYCKU"
   }
 ]
